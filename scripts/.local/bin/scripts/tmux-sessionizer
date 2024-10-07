@@ -3,7 +3,13 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Workspace/DSA/ ~/Workspace/Practice ~/Workspace/Projects/ ~/dotfiles/tmux/ ~/dotfiles/hypr/ ~/dotfiles/nvim/ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Workspace/DSA/ \
+        ~/Workspace/Practice/ \
+        ~/Workspace/Projects/ \
+        ~/dotfiles/tmux/.config/ \
+        ~/dotfiles/hypr/.config/ \
+        ~/dotfiles/nvim/.config/ \
+        -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
