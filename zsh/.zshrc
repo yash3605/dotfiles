@@ -156,3 +156,7 @@ alias spotify="flatpak run com.spotify.Client"
 alias overskride="flatpak run io.github.kaii_lb.Overskride"
 unset DOCKER_HOST
 alias protontricks='flatpak run com.github.Matoking.protontricks'
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH=$PATH:$HOME/go/bin
