@@ -1,0 +1,8 @@
+[window]
+decorations = "none"
+opacity = 0.88
+padding = { x = 0, y = 0 }
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+size = 20.0

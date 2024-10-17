@@ -17,7 +17,7 @@ autocmd("LspAttach", {
 	group = AshGroup,
 	callback = function(e)
 		local opts = { buffer = e.buf }
-		vim.keymap.set("i", "<C-h>", function()
+		vim.keymap.set("i", "<C-q>", function()
 			vim.lsp.buf.signature_help()
 		end, opts)
 	end,
