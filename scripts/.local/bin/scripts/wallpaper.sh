@@ -5,4 +5,4 @@ waypaper --random
 path_to_wallpaper=$(swww query | grep -Po "/.*")
 
 # Use pywal to apply theme according to the wallpaper
-wal -i $path_to_wallpaper
+wal -st -i $path_to_wallpaper

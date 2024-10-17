@@ -13,15 +13,3 @@ vim.opt.colorcolumn = "80"
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
-
--- autocmd
-local augroup = vim.api.nvim_create_augroup
-local AshGroup = augroup("Ash", {})
-
-local autocmd = vim.api.nvim_create_autocmd
-
-autocmd("LspAttach", {
-	group = AshGroup,
-	pattern = "*",
-	command = [[%s/\s\+$//e]],
-})

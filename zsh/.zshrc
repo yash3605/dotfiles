@@ -7,16 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Plugins
 plugins=(git web-search)
 
 source $ZSH/oh-my-zsh.sh
@@ -29,12 +20,12 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 
-
+# Variables
 SAVEHIST=100
 HISTFILE=~/.zsh_history
 EDITOR=nvim
 
-
+###################################################
 
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -156,6 +147,7 @@ alias spotify="flatpak run com.spotify.Client"
 alias overskride="flatpak run io.github.kaii_lb.Overskride"
 unset DOCKER_HOST
 alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias zen="flatpak run io.github.zen-browser.Zen"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
