@@ -149,6 +149,9 @@ unset DOCKER_HOST
 alias protontricks='flatpak run com.github.Matoking.protontricks'
 alias zen="flatpak run io.github.zen-browser.Zen"
 
+# webi
+source ~/.config/envman/PATH.env
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export PATH=$PATH:$HOME/go/bin

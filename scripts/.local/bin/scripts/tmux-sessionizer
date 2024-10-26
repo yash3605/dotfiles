@@ -6,6 +6,7 @@ else
     selected=$(find ~/Workspace/DSA/ \
         ~/Workspace/Practice/ \
         ~/Workspace/Projects/ \
+        ~/Workspace/advent_of_code/ \
         ~/dotfiles/tmux/.config/ \
         ~/dotfiles/hypr/.config/ \
         ~/dotfiles/nvim/.config/ \
