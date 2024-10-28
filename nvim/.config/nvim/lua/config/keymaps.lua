@@ -11,5 +11,3 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
-
-vim.keymap.set("n", "<leader><C-i>", vim.lsp.buf.format)
