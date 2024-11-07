@@ -1,0 +1,11 @@
+waybar
+rofi
+wlogout
+hyprlock
+hypridle
+nm-applet
+swaync
+pywal
+waypaper
+[fonts]
+Jetbrains mono
