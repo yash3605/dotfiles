@@ -1,8 +1,11 @@
 [window]
 decorations = "none"
-opacity = 0.9
+# opacity = 0.9
 padding = { x = 0, y = 0 }
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono" }
 size = 20.0
+
+[colors.primary]
+background = "#030712"
