@@ -19,24 +19,24 @@
 "modules-left": [
     "custom/menu",
     "cpu",
-    "temperature", 
+    "temperature",
     "memory",
     "disk",
     ],
-    
+
 "modules-center": [
     //"hyprland/window",
     "hyprland/workspaces#roman",
 	],
-    
+
 "modules-right": [
     //"network",
     //"bluetooth",
 	"custom/weather",
-    "battery", 
+    "battery",
     "backlight",
     "pulseaudio",
-    //"wireplumber", 
+    //"wireplumber",
     "pulseaudio#microphone",
     "keyboard-state",
     "custom/power",
@@ -56,21 +56,21 @@
 "fixed-center": true,
 "ipc": true,
 //"gtk-layer-shell": true,
-   
+
 "modules-left": [
     "custom/lock",
-    "idle_inhibitor",   
+    "idle_inhibitor",
     ],
-    
+
 "modules-center": [
     "clock#vertical",
     ],
-    
+
 "modules-right": [
 		"mpris",
 		"custom/swaync",
     "tray",
     "custom/light_dark",
     ],
-    
+
 }]
