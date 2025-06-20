@@ -1,6 +1,7 @@
 return {
 	"nvim-lua/plenary.nvim",
 	"eandrju/cellular-automaton.nvim",
+	"ThePrimeagen/vim-be-good",
 
 	-- copilot
 	"github/copilot.vim",
@@ -23,4 +24,5 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
+
 }

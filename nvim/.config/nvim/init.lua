@@ -407,6 +407,7 @@ require("lazy").setup({
 				"markdown",
 				"markdown_inline",
 				"query",
+				"embedded_template",
 				"vim",
 				"vimdoc",
 				"typescript",
