@@ -1,0 +1,79 @@
+add_newline = false
+format = """
+[╭─](fg:#1e2030) \
+$os\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$golang\
+$rust\
+$c\
+$line_break\
+[╰─](fg:#1e2030) $character"""
+
+palette = "tokyonight"
+
+[palettes.tokyonight]
+dark    = "#1e2030"
+dim     = "#414868"
+fg      = "#c0caf5"
+blue    = "#7aa2f7"
+purple  = "#bb9af7"
+cyan    = "#7dcfff"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+red     = "#f7768e"
+
+[os]
+disabled = false
+style = "fg:dim"
+
+[os.symbols]
+Arch = " "
+
+[directory]
+style = "bold fg:blue"
+format = "[$path]($style) "
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "fg:purple"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "fg:yellow"
+format = "[$all_status$ahead_behind]($style) "
+
+[python]
+symbol = " "
+style = "fg:yellow"
+format = "[$symbol$version]($style) "
+
+[nodejs]
+symbol = " "
+style = "fg:green"
+format = "[$symbol$version]($style) "
+
+[golang]
+symbol = " "
+style = "fg:cyan"
+format = "[$symbol$version]($style) "
+
+[rust]
+symbol = " "
+style = "fg:red"
+format = "[$symbol$version]($style) "
+
+[c]
+symbol = " "
+style = "fg:blue"
+format = "[$symbol$version]($style) "
+
+[character]
+success_symbol = "[❯](bold fg:green)"
+error_symbol = "[❯](bold fg:red)"
+vimcmd_symbol = "[❮](bold fg:purple)"

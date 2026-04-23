@@ -1,0 +1,151 @@
+configuration {
+    modi:                "drun";
+    show-icons:          true;
+    drun-display-format: "{name}";
+    hide-scrollbar:      true;
+    display-drun:        "";
+    icon-theme:          "Papirus-Dark";
+    terminal:            "ghostty";
+    hover-select:        true;
+    me-select-entry:     "";
+    me-accept-entry:     "MousePrimary";
+}
+
+* {
+    bg:            rgba(7, 7, 14, 97%);
+    bg-alt:        rgba(12, 10, 22, 98%);
+    bg-selected:   rgba(122, 162, 247, 11%);
+    border-bright: rgba(122, 162, 247, 28%);
+    separator:     rgba(255, 255, 255, 4%);
+    fg:            #c0caf5;
+    fg-dim:        #414868;
+    fg-subtle:     #1e2030;
+    accent:        #7aa2f7;
+    green:         #9ece6a;
+    urgent:        #f7768e;
+
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0px;
+}
+
+window {
+    background-color: @bg;
+    border:           1px solid;
+    border-color:     @border-bright;
+    border-radius:    22px;
+    width:            620px;
+    padding:          0px;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [inputbar, listview];
+    spacing:          0px;
+    padding:          0px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius:    22px 22px 0px 0px;
+    border:           0px 0px 1px 0px;
+    border-color:     @separator;
+    padding:          18px 22px;
+    children:         [prompt, entry];
+    spacing:          14px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    font:             "GeistMono Nerd Font Bold 20";
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    placeholder:      "Search applications...";
+    placeholder-color: @fg-subtle;
+    font:             "GeistMono Nerd Font 14";
+    cursor-color:     @accent;
+    vertical-align:   0.5;
+}
+
+listview {
+    background-color: transparent;
+    padding:          10px;
+    lines:            7;
+    scrollbar:        false;
+    spacing:          2px;
+    cycle:            true;
+    dynamic:          true;
+    border-radius:    0px 0px 22px 22px;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    12px;
+    padding:          11px 16px;
+    spacing:          16px;
+    children:         [element-icon, element-text];
+    cursor:           pointer;
+    orientation:      horizontal;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg-dim;
+}
+
+element normal.urgent {
+    background-color: transparent;
+    text-color:       @urgent;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color:       @green;
+}
+
+element selected.normal {
+    background-color: @bg-selected;
+    text-color:       @accent;
+    border:           1px solid;
+    border-color:     @border-bright;
+}
+
+element selected.urgent {
+    background-color: rgba(247, 118, 142, 10%);
+    text-color:       @urgent;
+    border:           1px solid;
+    border-color:     rgba(247, 118, 142, 30%);
+}
+
+element selected.active {
+    background-color: rgba(158, 206, 106, 10%);
+    text-color:       @green;
+    border:           1px solid;
+    border-color:     rgba(158, 206, 106, 30%);
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg-dim;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             26px;
+    cursor:           inherit;
+    vertical-align:   0.5;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "GeistMono Nerd Font 13";
+    cursor:           inherit;
+    vertical-align:   0.5;
+    highlight: bold #7aa2f7;
+}
