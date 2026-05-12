@@ -1,16 +1,17 @@
 #!/bin/bash
 
 WALLPAPER_DIR="$HOME/Wallpaper"
-INTERVAL=1800  # change every 30 mins, adjust as you like
 
-while true; do
-    WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) | shuf -n 1)
-    
-    if [ -n "$WALLPAPER" ]; then
-        hyprctl hyprpaper unload all
-        hyprctl hyprpaper preload "$WALLPAPER"
-        hyprctl hyprpaper wallpaper "eDP-1,$WALLPAPER"
-    fi
-    
-    sleep $INTERVAL
-done
+# Find a random wallpaper with priority for high-quality images
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) -size +500k 2>/dev/null | shuf -n 1)
+
+# Fallback if no wallpaper found
+if [ -z "$WALLPAPER" ]; then
+    WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) 2>/dev/null | shuf -n 1)
+fi
+
+if [ -n "$WALLPAPER" ]; then
+    hyprctl hyprpaper unload all
+    hyprctl hyprpaper preload "$WALLPAPER"
+    hyprctl hyprpaper wallpaper "eDP-1,$WALLPAPER"
+fi

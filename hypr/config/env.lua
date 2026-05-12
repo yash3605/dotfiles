@@ -1,0 +1,2 @@
+-- Environment Variables Configuration
+-- No additional environment variables needed for this setup
