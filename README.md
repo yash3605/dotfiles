@@ -19,13 +19,6 @@ My personal Linux rice — minimal, keyboard-driven, and fast.
 
 ---
 
-## 📸 Preview
-
-> *Add a screenshot here — `scrot`, `grim`, or `grimblast` on Hyprland.*
-> Drag and drop an image into this file on GitHub, or paste the path to your screenshot.
-
----
-
 ## 🧰 Stack
 
 | Role | Tool |
@@ -149,7 +142,7 @@ Config: [`fish/`](./fish)
 
 ## 📝 Neovim
 
-Neovim config written in **Lua** (83.7% of this repo is Lua — it shows).
+Neovim config written in **Lua** 
 
 Likely includes:
 - Plugin manager (lazy.nvim or packer)
